@@ -9,22 +9,33 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            overflow-x: hidden;
+            white-space: nowrap;
+        }
+        .section {
+            display: inline-block;
+            vertical-align: top;
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        #about, #portfolio, #contact {
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
         }
         header {
             background-color: #333;
             color: #fff;
             padding: 10px 0;
             text-align: center;
+            width: 100vw;
+            display: inline-block;
         }
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        #about, #portfolio, #contact {
-            padding: 20px 0;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 20px;
         }
         h1, h2 {
             color: #333;
@@ -40,7 +51,7 @@
             margin-bottom: 20px;
         }
         .portfolio-item {
-            margin: 10px;
+            margin: 10px 0;
             padding: 10px;
             background-color: #fff;
             border: 1px solid #ddd;
@@ -50,25 +61,27 @@
             color: #fff;
             text-align: center;
             padding: 10px 0;
+            width: 100vw;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
-    <header>
+    <header class="section">
         <div class="container">
             <h1>Clement Mbowe</h1>
             <p>Graphic Designer & Pencil Drawing Artist</p>
         </div>
     </header>
 
-    <section id="about">
+    <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <p>I am Clement Mbowe, a graphic designer and pencil drawing artist. I have experience in Adobe Photoshop and Illustrator. Currently, I am working on recreating my art projects, which were accidentally deleted.</p>
         </div>
     </section>
 
-    <section id="portfolio">
+    <section id="portfolio" class="section">
         <div class="container">
             <h2 class="section-title">Portfolio</h2>
             <div class="portfolio-item">
@@ -80,7 +93,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Contact Me</h2>
             <p>If you'd like to get in touch, you can reach me at:</p>
@@ -89,10 +102,11 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="section">
         <div class="container">
             <p>&copy; 2024 Clement Mbowe. All Rights Reserved.</p>
         </div>
     </footer>
 </body>
 </html>
+
